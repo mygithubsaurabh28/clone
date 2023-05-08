@@ -1,0 +1,92 @@
+$size:2px;
+
+@mixin dimension1{
+    height: 80px;
+    width: 100vw;
+}
+
+@mixin dimension3{
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+@mixin dimension2{
+    height: 30px;
+    width: 250px;}
+
+
+.main{
+    @include dimension1;
+    background-color:white;
+    display: flex;
+    border: 2px solid gainsboro;
+}
+
+#search{
+    @include dimension2();
+    margin-left: 100px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left:600px;
+    border: 1px solid gray;
+    box-shadow: slategrey;
+    background-color:rgba(59,130,246,0.5);
+}
+
+.img1{
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.img2{
+    @include dimension3();
+}
+
+.main h3{
+    margin-left: 10px;
+}
+
+.sidebox{
+    height: 50px;
+    width: 350px;
+    display: flex;
+    flex-direction:flex-end;
+    margin-left: 800px;
+    margin-top: 20px;
+}
+
+.main{
+    .sidebox{
+}
+.sidebox{
+
+    .img{
+        margin-left:15px;
+        display: flex;
+        gap: 3px;
+    }
+    
+}
+
+}
+
+.navbar{
+    @include dimension1();
+    position: absolute;
+    margin-top:-8px;
+    .list{
+        display: flex;
+        justify-content: space-around;
+        border:1px solid gainsboro;
+    }
+
+    .list li{
+        text-decoration: none;
+        list-style-type: none;
+    }
+}
+
+
+
